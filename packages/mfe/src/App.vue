@@ -13,8 +13,8 @@ const data = ref({
 const resolveConfig = async () => {
     try{
       const config1  = await import(`${window.versionPrefix}/config.js?url`)
-      data.value.config1  = data1;
-      console.log({data1})
+      data.value.config1  = config1;
+      console.log({config1})
     }catch(e) {
       console.warn(e)
     }
