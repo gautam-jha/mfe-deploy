@@ -12,7 +12,7 @@ const data = ref({
 })
 
 function getConfigVersion() {
-  return data.config2?.version;
+  return data.value.config2?.version;
 }
 
 const resolveConfig1 = async () => {
