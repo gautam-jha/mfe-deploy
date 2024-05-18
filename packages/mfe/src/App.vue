@@ -1,6 +1,7 @@
 <template>
   <h2>Micro FE App</h2>
-  <div>{{ JSON.stringify(data) }}</div>
+  <div>config1:{{ data.config1?.version }}</div>
+  <div>config2: {{ getConfigVersion() }}</div>
 </template>
 
 <script setup>
@@ -9,6 +10,10 @@ const data = ref({
    config1: null,
    config2: null,
 })
+
+function getConfigVersion() {
+  return data.config2?.version;
+}
 
 const resolveConfig1 = async () => {
     try{
