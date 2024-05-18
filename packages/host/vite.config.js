@@ -4,6 +4,7 @@ import federation from "@originjs/vite-plugin-federation";
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  base:'./',
   build: {
     target: 'esnext' //browsers can handle the latest ES features
   },
