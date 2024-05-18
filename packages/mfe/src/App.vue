@@ -11,7 +11,7 @@ try{
 }
 
 try{
-  const data1  = await import('../config.js?url')
+  const data2  = await import('../config.js?url')
   console.log({data2})
 }catch(e) {
   console.warn('e2',e)
