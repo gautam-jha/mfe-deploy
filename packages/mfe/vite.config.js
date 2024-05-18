@@ -19,7 +19,7 @@ export default defineConfig({
   ],
   build: {
     rollupOptions: {
-      external: ['/config.js?url', './config.js?url']
+      external: ['/config.js?url', '../config.js?url']
     }
   }
 });
