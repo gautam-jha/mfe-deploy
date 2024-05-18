@@ -1,6 +1,6 @@
 <template>
   <h2>Micro FE App</h2>
-  {{ JSON.stringify(data) }}
+  <div>{{ JSON.stringify(data) }}</div>
 </template>
 
 <script setup>
@@ -10,7 +10,7 @@ const data = ref({
    config2: null,
 })
 
-const resolveConfig = async () => {
+const resolveConfig1 = async () => {
     try{
       const config1  = await import(`${window.versionPrefix}/config.js?url`)
       data.value.config1  = config1?.default;
@@ -18,7 +18,10 @@ const resolveConfig = async () => {
     }catch(e) {
       console.warn(e)
     }
+}
+resolveConfig1()
 
+const resolveConfig2 = async () => {
     try{
       const config2  = await import('../config.js?url')
       data.value.config2  = config2?.default;
@@ -27,5 +30,5 @@ const resolveConfig = async () => {
       console.warn('e2',e)
     }
 }
-resolveConfig()
+resolveConfig2()
 </script>
