@@ -18,6 +18,10 @@ export default defineConfig({
     }),
   ],
   build: {
+    modulePreload: false,
+    minify: false,
+    cssCodeSplit: false,
+    target: 'esnext',
     rollupOptions: {
       external: ['/config.js?url', '../config.js?url']
     }
