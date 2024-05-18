@@ -4,6 +4,7 @@ import federation from "@originjs/vite-plugin-federation";
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  base: './',
   plugins: [
     vue(),
     federation({
@@ -16,4 +17,9 @@ export default defineConfig({
       // shared: ["vue"],
     }),
   ],
+  build: {
+    rollupOptions: {
+      external: ['/config.js?url', './config.js?url']
+    }
+  }
 });
