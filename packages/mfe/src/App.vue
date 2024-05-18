@@ -13,7 +13,7 @@ const data = ref({
 const resolveConfig = async () => {
     try{
       const config1  = await import(`${window.versionPrefix}/config.js?url`)
-      data.value.config1  = config1;
+      data.value.config1  = config1?.default;
       console.log({config1})
     }catch(e) {
       console.warn(e)
@@ -21,8 +21,8 @@ const resolveConfig = async () => {
 
     try{
       const config2  = await import('../config.js?url')
+      data.value.config2  = config2?.default;
       console.log({config2})
-      data.value.config2  = config2;
     }catch(e) {
       console.warn('e2',e)
     }
