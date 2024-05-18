@@ -34,9 +34,13 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 18
-          cache: 'npm'
+      - uses: pnpm/action-setup@v4
+        name: Install pnpm
+        with:
+          version: 8
+          run_install: false
       - name: Install dependencies
-        run: npm install -g pnpm && pnpm i
+        run: pnpm install
       - name: Build
         run: pnpm build
       - name: Setup Pages
