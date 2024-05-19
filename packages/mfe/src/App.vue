@@ -40,7 +40,7 @@ resolveConfig1();
 
 const resolveConfig2 = async () => {
   try {
-    const config2 = await import("../config.js?url");
+    const config2 = await import("../../../config.js?url");
     data.value.config2 = config2?.default;
     console.log({ config2 });
   } catch (e) {

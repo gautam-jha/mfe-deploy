@@ -23,7 +23,7 @@ export default defineConfig({
     cssCodeSplit: false,
     target: 'esnext',
     rollupOptions: {
-      external: ['/config.js?url', '../config.js?url']
+      external: ['/config.js?url', '../../../config.js?url']
     }
   }
 });
