@@ -14,7 +14,7 @@ export default defineConfig({
       exposes: {
         "./Mfe": "./src/App.vue",
       },
-      // shared: ["vue"],
+      shared: ["vue"],
     }),
   ],
   build: {
